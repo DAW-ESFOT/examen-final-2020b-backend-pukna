@@ -1,5 +1,6 @@
 <?php
 
+use App\Supplier;
 use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -29,11 +30,26 @@ class UsersTableSeeder extends Seeder
 
         // Generar algunos usuarios para nuestra aplicacion
         for ($i = 0; $i < 10; $i++) {
-            User::create([
+            $user = User::create([
                 'name' => $faker->name,
                 'email' => $faker->email,
                 'password' => $password,
             ]);
+
+
+            $user->suppliers()->saveMany(
+                $faker->randomElements(
+                    array(
+                        Supplier::find(1),
+                        Supplier::find(2),
+                        Supplier::find(3),
+                        Supplier::find(4),
+                        Supplier::find(5),
+                        Supplier::find(6)
+                    ), $faker->numberBetween(1, 6), false
+                )
+            );
+
         }
     }
 }
