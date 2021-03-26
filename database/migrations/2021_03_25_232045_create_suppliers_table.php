@@ -26,7 +26,7 @@ class CreateSuppliersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
             $table->timestamps();
         });
-        Schema::create('supplier_product', function (Blueprint $table) {
+        Schema::create('product_supplier', function (Blueprint $table) {
             $table->unsignedBigInteger('supplier_id');
             $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('restrict');
             $table->unsignedBigInteger('product_id');

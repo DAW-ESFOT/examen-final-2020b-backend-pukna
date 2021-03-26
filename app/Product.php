@@ -3,14 +3,23 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Product extends Model
 {
     protected $fillable = ['name', 'code', 'status'];
 
-    public function Supplier()
+    public static function boot()
     {
-        return $this->belongsToMany('App\Supplier')->withTimestamps();
+        parent::boot();
+        static::creating(function ($product) {
+            $product->user_id = Auth::id();
+        });
+    }
+
+    public function suppliers()
+    {
+        return $this->belongsToMany('App\Supplier')->as('producer')->withTimestamps();
     }
 
 }
