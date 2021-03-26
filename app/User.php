@@ -56,4 +56,11 @@ class User extends Authenticatable implements JWTSubject
         return $this->belongsTo('App\User');
     }
 
+    public function Supplier()
+    {
+        return $this->belongsToMany('App\Supplier')->withTimestamps();
+    }
+
+
+
 }
