@@ -67,16 +67,16 @@ class UserController extends Controller
 
 
         return response()->json(new UserResource($user, $token), 201)->withCookie(
-                'token',
-                $token,
-                config('jwt.ttl'),
-                '/',
-                null,
-                config('app.env') !== 'local',
-                true,
-                false,
-                config('app.env') !== 'local' ? 'None' : 'Lax'
-            );
+            'token',
+            $token,
+            config('jwt.ttl'),
+            '/',
+            null,
+            config('app.env') !== 'local',
+            true,
+            false,
+            config('app.env') !== 'local' ? 'None' : 'Lax'
+        );
     }
 
     public function getAuthenticatedUser()
