@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Http\Resources\Product as ProductResource;
+use App\Http\Resources\ProductCollection;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -12,9 +15,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    private static $messages = [
+        'required' => 'El campo :attribute es obligatorio.',
+
+    ];
     public function index()
     {
-        return response()->json(Product::all(), 200);
+        return new ProductCollection(Product::all()->sortByDesc('created_at'));
 
     }
 
@@ -26,6 +33,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|string|unique:products|max:255',
+            'code' => 'required|string|unique:products|max:10',
+            'price' => 'required|int'
+        ], self::$messages);
+
         $product = Product::create($request->all());
         return response()->json($product, 201);
     }
@@ -50,6 +63,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+
+        $request->validate([
+           'name' => 'required|string|unique:name|max:255',
+            'code' => 'required|string|unique:code|max:10',
+            'price' => 'required|integer'
+        ], self::$messages);
+
         $product->update($request->all());
         return response()->json($product, 200);
     }

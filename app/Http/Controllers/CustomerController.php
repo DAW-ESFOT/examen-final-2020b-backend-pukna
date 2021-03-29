@@ -12,6 +12,10 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    private static $messages = [
+        'required' => 'El campo :attribute es obligatorio.',
+
+    ];
     public function index()
     {
         return response()->json(Customer::all(), 200);
@@ -26,6 +30,12 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|string|unique:customers',
+            'lastname' => 'required|string|unique:customers',
+            'document' => 'required|string|unique:customers|max:10'
+        ], self::$messages);
+
         $customer = Customer::create($request->all());
         return response()->json($customer, 201);
     }
@@ -50,6 +60,11 @@ class CustomerController extends Controller
      */
     public function update(Request $request, Customer $customer)
     {
+        $request->validate([
+            'name' => 'required|string|unique:customers',
+            'lastname' => 'required|string|unique:customers',
+            'document' => 'required|string|unique:customers|max:10'
+        ], self::$messages);
         $customer->update($request->all());
         return response()->json($customer, 200);
     }
