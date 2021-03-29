@@ -7,6 +7,7 @@ use App\Http\Resources\Product as ProductResource;
 use App\Http\Resources\ProductCollection;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -22,6 +23,13 @@ class ProductController extends Controller
     public function index()
     {
         return new ProductCollection(Product::all()->sortByDesc('created_at'));
+
+    }
+    public function run ($id)
+    {
+
+        $article=DB::table('products')->select()->where('user_id','=',$id)->get();
+        return response()->json($article);
 
     }
 
