@@ -15,7 +15,6 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Http\Resources\User as UserResource;
 use Tymon\JWTAuth\JWTGuard;
 
-
 class UserController extends Controller
 {
     public function authenticate(Request $request)
@@ -46,43 +45,38 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-        $request->validate([
-
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-
         ]);
 
-        if ($request->role == User::ROLE_USER) {
-
-            $userable = Writer::create([
-                'editorial' => $request->get('editorial'),
-                'short_bio' => $request->get('short_bio'),
-            ]);
-        } else {
-            $userable = Admin::create([
-                'credential_number' => $request->get('credential_number'),
-            ]);
+        if ($validator->fails()) {
+            return response()->json($validator->errors()->toJson(), 400);
         }
 
-        $user = $userable->user()->create([
+        $user = User::create([
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),]);
 
         $token = JWTAuth::fromUser($user);
 
-        return response()->json(new UserResource($user, $token), 201)
-            ->withCookie(
-                'token',
-                $token,
-                config('jwt.ttl'),
-                '/',
-                null,
-                config('app.env') !== 'local',
-                true,
-                false,
-                config('app.env') !== 'local' ? 'None' : 'Lax'
-            );
+        return response()->json(compact('user', 'token'), 201);
+
+
+
+        return response()->json(new UserResource($user, $token), 201)->withCookie(
+            'token',
+            $token,
+            config('jwt.ttl'),
+            '/',
+            null,
+            config('app.env') !== 'local',
+            true,
+            false,
+            config('app.env') !== 'local' ? 'None' : 'Lax'
+        );
     }
 
     public function getAuthenticatedUser()
@@ -100,7 +94,6 @@ class UserController extends Controller
         }
         return response()->json(new UserResource($user), 200);
     }
-
     public function logout()
     {
         try {
