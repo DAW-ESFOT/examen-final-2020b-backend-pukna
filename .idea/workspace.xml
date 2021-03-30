@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89c75aad-4b7c-4a6a-9fb6-aafbcd303cec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_07_192145_create_articles_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_02_181642_add_user_id_column_article.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_02_182153_create_comments_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_06_081205_create_categories_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_08_091047_add_image_column_article.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_10_114040_add_role_column_user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_10_074706_create_admins_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ArticlesTableSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/CustomersTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/SuppliersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CategoriesTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CommentsTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +257,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="D:/Respaldos/Documentos/blog-dev" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeders" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -277,6 +271,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario Montero\examen-final-2020b-backend-pukna\database\seeders" />
       <recent name="C:\Users\Mario Montero\examen-final-2020b-backend-pukna\config" />
     </key>
   </component>
