@@ -19,7 +19,7 @@ class Product extends JsonResource
             'name' => $this->name,
             'code' => $this->code,
             'price' => $this->price,
-            'user' => "/api/users/" . $this->user_id,
+            'user' =>$this->user_id,
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
