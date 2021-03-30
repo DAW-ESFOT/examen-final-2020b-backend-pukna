@@ -1,7 +1,11 @@
 <?php
 
+namespace Database\Seeders;
+
+use CustomersTableSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,6 +22,5 @@ class DatabaseSeeder extends Seeder
         $this->call(CustomersTableSeeder::class);
         $this->call(ProductsTableSeeder::class);
         Schema::enableForeignKeyConstraints();
-
     }
 }

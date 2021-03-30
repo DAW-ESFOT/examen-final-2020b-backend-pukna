@@ -25,13 +25,7 @@ class ProductController extends Controller
         return new ProductCollection(Product::all()->sortByDesc('created_at'));
 
     }
-    public function run ($id)
-    {
 
-        $article=DB::table('products')->select()->where('user_id','=',$id)->get();
-        return response()->json($article);
-
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -49,6 +43,14 @@ class ProductController extends Controller
 
         $product = Product::create($request->all());
         return response()->json($product, 201);
+    }
+    public function run ($id)
+    {
+
+        $article=DB::table('products')->select()->where('user_id','=',$id)->get();
+        return response()->json($article);
+
+
     }
 
     /**
@@ -73,7 +75,7 @@ class ProductController extends Controller
     {
 
         $request->validate([
-           'name' => 'required|string|unique:name|max:255',
+            'name' => 'required|string|unique:name|max:255',
             'code' => 'required|string|unique:code|max:10',
             'price' => 'required|integer'
         ], self::$messages);
