@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="89c75aad-4b7c-4a6a-9fb6-aafbcd303cec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/app/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Supplier.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/CustomersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CustomersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/SuppliersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SuppliersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +260,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+
     <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
+
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -312,6 +316,8 @@
       <workItem from="1617115946660" duration="4021000" />
       <workItem from="1617120547992" duration="353000" />
       <workItem from="1617121875806" duration="2034000" />
+      <workItem from="1617171402418" duration="42000" />
+      <workItem from="1617171978344" duration="6211000" />
     </task>
     <servers />
   </component>
