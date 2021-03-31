@@ -3,17 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="89c75aad-4b7c-4a6a-9fb6-aafbcd303cec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ProductCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_10_074533_add_userable_columns_users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CustomersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CustomersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SuppliersTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProductsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/SuppliersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/SuppliersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="5-configuaracion-cokiesycords" />
+        <entry key="$PROJECT_DIR$" value="3-implementacion-seeders" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -263,7 +258,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -277,6 +272,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario Montero\examen-final-2020b-backend-pukna\database" />
       <recent name="C:\Users\Mario Montero\examen-final-2020b-backend-pukna" />
       <recent name="C:\Users\Mario Montero\examen-final-2020b-backend-pukna\database\seeders" />
       <recent name="C:\Users\Mario Montero\examen-final-2020b-backend-pukna\config" />

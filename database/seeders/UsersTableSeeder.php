@@ -1,4 +1,6 @@
 <?php
+namespace Database\Seeders;
+
 
 use App\Supplier;
 use App\User;
@@ -37,18 +39,18 @@ class UsersTableSeeder extends Seeder
             ]);
 
 
-            $user->suppliers()->saveMany(
-                $faker->randomElements(
-                    array(
-                        Supplier::find(1),
-                        Supplier::find(2),
-                        Supplier::find(3),
-                        Supplier::find(4),
-                        Supplier::find(5),
-                        Supplier::find(6)
-                    ), $faker->numberBetween(1, 6), false
-                )
-            );
+//            $user->suppliers()->saveMany(
+//                $faker->randomElements(
+//                    array(
+//                        Supplier::find(1),
+//                        Supplier::find(2),
+//                        Supplier::find(3),
+//                        Supplier::find(4),
+//                        Supplier::find(5),
+//                        Supplier::find(6)
+//                    ), $faker->numberBetween(1, 6), false
+//                )
+//            );
 
         }
     }

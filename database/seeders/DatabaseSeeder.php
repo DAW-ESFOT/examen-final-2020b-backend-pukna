@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use CustomersTableSeeder;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 
@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        $this->call(SuppliersTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
         $this->call(CustomersTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
+        $this->call(SuppliersTableSeeder::class);
         $this->call(ProductsTableSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
